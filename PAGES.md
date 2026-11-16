@@ -1,13 +1,13 @@
 # BNU_math 网站
 
-首次发布：
+首次发布：在 Settings → Pages → Build and deployment 中将 Source 设为 GitHub Actions，合并网站 PR 到 main 后等待工作流完成。也可手动运行 workflow_dispatch。
 
-1. 在仓库 Settings → Pages → Build and deployment 中，将 Source 设为 GitHub Actions。
-2. 合并网站 PR 到 main；Actions 中的 Deploy BNU_math to GitHub Pages 会构建并发布。也可手动运行 workflow_dispatch。
-3. 等部署成功后访问 https://sunnylovelyday.github.io/database_of_BNUmath/ 。此地址是预期地址，实际结果以 Actions 的 deployment URL 为准。
+网址：https://sunnylovelyday.github.io/database_of_BNUmath/
 
-网站支持关键词搜索、三类资料筛选和考试课程筛选，按仓库原始嵌套目录逐层展开浏览。搜索时自动展开匹配文件所在文件夹。点击文件直接访问原文件地址，不经过 GitHub 文件展示页；PDF 是否在浏览器内预览取决于浏览器设置及文件服务响应头，部分文件可能直接下载。目录从三类资料文件夹中的 Git 跟踪文件自动生成，不包含隐藏文件。添加资料并推送 main 后，部署时自动更新索引，无需修改 HTML。生成索引：`python scripts/build_catalog.py`。本地查看：先生成目录，再运行 `python -m http.server 8000`。
+网站按原始文件夹层级浏览，支持关键词搜索、分类和课程筛选，搜索时自动展开匹配目录。
 
-发布包仅包含 index.html 与 catalog.json；资料保留在原仓库。站点无登录、令牌或浏览器端 GitHub API 请求。GitHub Actions 使用 GitHub 自动提供的短期令牌和 Pages OIDC，不需要配置个人访问令牌。
+PDF 会随页面一起部署到 GitHub Pages，链接使用站点相对路径，例如 `./考试题目/数学分析1/文件.pdf`。文件由 github.io 提供，使用 PDF 内容类型，让支持 PDF 的浏览器直接阅读。其他格式仍使用 GitHub raw 地址下载，不复制到 Pages。
 
-如使用 Git LFS，工作流不会拉取大文件；目录中的大小可能显示 LFS 指针大小。文件通过 GitHub raw 文件地址访问，由 GitHub 处理原文件重定向。
+目录通过 `python scripts/build_catalog.py` 从跟踪文件生成。工作流获取 LFS 原文件，校验 PDF 文件头，并保留嵌套路径复制 PDF；不发布 Git 元数据。当前目录中 PDF 总计约 677 MB。构建超过 950 MB 会报错，预留 GitHub Pages 1 GB 大小限制的余量。增加大量资料时需关注构建包大小。
+
+站点无需登录或个人访问令牌。main 更新后会重新生成目录并部署。部署前本地运行目录生成脚本，可用 `python -m http.server 8000` 预览。
