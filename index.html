@@ -4,19 +4,63 @@
 <title>BNU_math · 北师大数学资料库</title>
 <meta name="description" content="北京师范大学数学学习资料索引：历年试题、教材答案与学习资料。">
 <style>
-:root{color-scheme:light;--ink:#182f39;--muted:#63777f;--line:#dce5e3;--green:#185b50}*{box-sizing:border-box}body{margin:0;background:#f7f8f3;color:var(--ink);font:16px/1.7 system-ui,sans-serif}a{color:var(--green);text-underline-offset:4px}header,main,footer{max-width:1160px;margin:auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}header strong{letter-spacing:.06em}header nav{display:flex;gap:24px}.hero{padding:60px 0 32px}.eyebrow{color:var(--green);font-size:13px;letter-spacing:.15em}h1{font-size:clamp(32px,5vw,58px);line-height:1.25;margin:14px 0 20px;letter-spacing:-.03em}h1 span{font-weight:400;color:var(--green)}.lead{max-width:620px;color:var(--muted)}.stats{display:flex;gap:40px;margin:30px 0}.stats b{font-size:26px;margin-right:8px}.stats span{color:var(--muted);font-size:14px}.workspace{display:grid;grid-template-columns:220px 1fr;gap:32px;border-top:1px solid var(--line);padding-top:28px}h2{font-size:20px;margin:0 0 16px}aside button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:12px;border-radius:6px;color:var(--ink);cursor:pointer}aside button.active{background:var(--green);color:white}.tools{display:grid;grid-template-columns:1fr 180px;gap:12px}input,select{width:100%;font:inherit;background:white;border:1px solid #b4c7c2;border-radius:6px;padding:12px;color:var(--ink)}label{font-size:13px;color:var(--muted)}#status{color:var(--muted);font-size:14px;margin:18px 0}.file{display:grid;grid-template-columns:1fr auto;gap:16px;padding:20px 0;border-top:1px solid var(--line)}.file h3{font-size:16px;margin:0;overflow-wrap:anywhere}.meta{font-size:12px;color:var(--muted);margin-top:5px;overflow-wrap:anywhere}.file>a{align-self:center;font-size:14px;white-space:nowrap}.pager{display:flex;gap:14px;align-items:center;margin:24px 0}.pager button{padding:8px 16px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--green);cursor:pointer}.pager button:disabled{opacity:.4;cursor:default}.about{margin:56px 0 12px;padding:28px;background:#eaf0e8;border-radius:8px}.about p{max-width:850px;font-size:14px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px}:focus-visible{outline:3px solid #b98432;outline-offset:3px}@media(max-width:700px){header nav{gap:12px;font-size:13px}.hero{padding-top:32px}.workspace{grid-template-columns:1fr;gap:20px}aside{display:flex;gap:8px;flex-wrap:wrap}aside h2{width:100%}aside button{width:auto;padding:8px 12px}.tools{grid-template-columns:1fr}.stats{gap:20px}.file{gap:10px}header,main,footer{padding:18px}}
+:root{color-scheme:light;--ink:#182f39;--muted:#63777f;--line:#dce5e3;--green:#185b50}*{box-sizing:border-box}body{margin:0;background:#f7f8f3;color:var(--ink);font:16px/1.7 system-ui,sans-serif}a{color:var(--green);text-underline-offset:4px}header,main,footer{max-width:1160px;margin:auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}header strong{letter-spacing:.06em}header nav{display:flex;gap:24px}.workspace{display:grid;grid-template-columns:220px 1fr;gap:32px;border-top:1px solid var(--line);padding-top:28px}h2{font-size:20px;margin:0 0 16px}aside button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:12px;border-radius:6px;color:var(--ink);cursor:pointer}aside button.active{background:var(--green);color:white}.tools{display:grid;grid-template-columns:1fr 180px;gap:12px}input,select{width:100%;font:inherit;background:white;border:1px solid #b4c7c2;border-radius:6px;padding:12px;color:var(--ink)}label{font-size:13px;color:var(--muted)}#status{color:var(--muted);font-size:14px;margin:18px 0}.file{display:grid;grid-template-columns:1fr auto;gap:16px;padding:20px 0;border-top:1px solid var(--line)}.file h3{font-size:16px;margin:0;overflow-wrap:anywhere}.meta{font-size:12px;color:var(--muted);margin-top:5px;overflow-wrap:anywhere}.file>a{align-self:center;font-size:14px;white-space:nowrap}.pager{display:flex;gap:14px;align-items:center;margin:24px 0}.pager button{padding:8px 16px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--green);cursor:pointer}.pager button:disabled{opacity:.4;cursor:default}.about{margin:56px 0 12px;padding:28px;background:#eaf0e8;border-radius:8px}.about p{max-width:850px;font-size:14px}footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px}:focus-visible{outline:3px solid #b98432;outline-offset:3px}@media(max-width:700px){header nav{gap:12px;font-size:13px}.workspace{grid-template-columns:1fr;gap:20px}aside{display:flex;gap:8px;flex-wrap:wrap}aside h2{width:100%}aside button{width:auto;padding:8px 12px}.tools{grid-template-columns:1fr}.file{gap:10px}header,main,footer{padding:18px}}
+.folder{margin:10px 0}.folder>summary{cursor:pointer;padding:10px 12px;background:#eaf0e8;border-radius:5px;font-weight:600;overflow-wrap:anywhere}.folder-content{margin:8px 0 8px 12px;padding-left:14px;border-left:1px solid var(--line)}.folder .file{padding:12px 0}.workspace{border-top:0} @media(max-width:700px){.folder-content{margin-left:4px;padding-left:9px}}
 </style>
 <header><strong>BNU_math<span style="color:#799087"> / 资料库</span></strong><nav><a href="#library">浏览资料</a><a href="#about">关于项目</a><a href="https://github.com/sunnylovelyday/database_of_BNUmath">GitHub ↗</a></nav></header>
-<main><section class="hero"><div class="eyebrow">BEIJING NORMAL UNIVERSITY · MATHEMATICS</div><h1>让知识流通，<br><span>让学习回归数学。</span></h1><p class="lead">北师大数科院学习资料库。汇集历年考试题目、教材参考答案与学习资料，帮助每一位同学平等地获取信息，从容地准备下一次探索。</p><div class="stats"><div><b id="total">—</b><span>份资料</span></div><div><b id="courses">—</b><span>门考试课程</span></div><div><b>开放</b><span>免费查阅</span></div></div></section>
-<section class="workspace" id="library"><aside aria-label="资料分类"><h2>资料目录</h2><button class="active" data-category="">全部资料</button><button data-category="考试题目">历年考试题目</button><button data-category="教材答案">教材参考答案</button><button data-category="其他资料">其他学习资料</button></aside><div><div class="tools"><div><label for="search">搜索资料</label><input id="search" type="search" placeholder="输入课程、文件名或年份，如：数学分析、2024" autocomplete="off"></div><div><label for="course">考试课程</label><select id="course"><option value="">全部课程</option></select></div></div><p id="status" role="status" aria-live="polite">正在载入资料目录…</p><div id="files"></div><div class="pager"><button id="prev" disabled>上一页</button><span id="page"></span><button id="next" disabled>下一页</button></div><noscript>请启用 JavaScript 浏览和搜索资料，或直接访问上方 GitHub 仓库链接。</noscript></div></section>
+<main>
+<section class="workspace" id="library"><aside aria-label="资料分类"><h2>资料目录</h2><button class="active" data-category="">全部资料</button><button data-category="考试题目">历年考试题目</button><button data-category="教材答案">教材参考答案</button><button data-category="其他资料">其他学习资料</button></aside><div><div class="tools"><div><label for="search">搜索资料</label><input id="search" type="search" placeholder="输入课程、文件名或年份，如：数学分析、2024" autocomplete="off"></div><div><label for="course">考试课程</label><select id="course"><option value="">全部课程</option></select></div></div><p id="status" role="status" aria-live="polite">正在载入资料目录…</p><div id="files"></div><noscript>请启用 JavaScript 浏览和搜索资料，或直接访问上方 GitHub 仓库链接。</noscript></div></section>
 <section class="about" id="about"><h2>关于这个资料库</h2><p>本项目旨在促进信息公开与考试公平，公开数科院专业课往年考试题目及其他学习资料。感谢整理、提供资料的同学和老师。资料仅供学习参考，答案可能存在错误，请结合课程内容自行核对。</p><p>欢迎投稿、补充勘误或提出建议：<a href="mailto:hejiaxing202411@163.com">hejiaxing202411@163.com</a>。投稿人的隐私将按照本人要求保护。若资料涉及侵权，请通过该邮箱联系维护者删除。</p><a href="https://github.com/sunnylovelyday/database_of_BNUmath/blob/main/README.md">阅读完整项目说明 ↗</a></section></main><footer>BNU_math · 学习资料开放索引　 /　文件由 GitHub 仓库提供。</footer>
 <script>
 'use strict';
-const repo='https://github.com/sunnylovelyday/database_of_BNUmath/blob/main/';
-let files=[],category='',page=1;const size=30;
+const repo='https://github.com/sunnylovelyday/database_of_BNUmath/raw/refs/heads/main/';
+let files=[],category='';
+const expanded=new Set();
 const $=id=>document.getElementById(id);
-function render(){const terms=$('search').value.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean);const course=$('course').value;const found=files.filter(f=>(!category||f.category===category)&&(!course||f.course===course)&&terms.every(t=>f.path.toLocaleLowerCase().includes(t)));const pages=Math.max(1,Math.ceil(found.length/size));page=Math.min(page,pages);$('status').textContent=`找到 ${found.length} 份资料 · 点击文件名或「查看文件」进入 GitHub 预览 / 下载`;$('files').replaceChildren();for(const f of found.slice((page-1)*size,page*size)){const row=document.createElement('article');row.className='file';const info=document.createElement('div');const h=document.createElement('h3');const a=document.createElement('a');a.href=repo+f.path.split('/').map(encodeURIComponent).join('/');a.textContent=f.name;h.append(a);const meta=document.createElement('div');meta.className='meta';meta.textContent=f.path+' · '+(f.size<1048576?(f.size/1024).toFixed(0)+' KB':(f.size/1048576).toFixed(1)+' MB');info.append(h,meta);const open=document.createElement('a');open.href=a.href;open.textContent='查看文件 ↗';open.setAttribute('aria-label','查看文件：'+f.name);row.append(info,open);$('files').append(row)}if(!found.length){const p=document.createElement('p');p.textContent='没有找到匹配资料，请尝试更短的关键词或切换分类。';$('files').append(p)}$('page').textContent=`${page} / ${pages}`;$('prev').disabled=page===1;$('next').disabled=page===pages}
-for(const b of document.querySelectorAll('[data-category]'))b.onclick=()=>{category=b.dataset.category;page=1;for(const x of document.querySelectorAll('[data-category]'))x.classList.toggle('active',x===b);$('course').value='';$('course').disabled=category!==''&&category!=='考试题目';render()};
-$('search').oninput=$('course').onchange=()=>{page=1;render()};$('prev').onclick=()=>{page--;render()};$('next').onclick=()=>{page++;render()};
-fetch('./catalog.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{files=data;const courses=[...new Set(files.map(f=>f.course).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));for(const c of courses){const o=document.createElement('option');o.value=o.textContent=c;$('course').append(o)}$('total').textContent=files.length;$('courses').textContent=courses.length;render()}).catch(()=>{$('status').textContent='目录暂时无法加载。请刷新重试，或通过上方 GitHub 链接直接浏览仓库。'});
+function fileLink(f){
+ const row=document.createElement('article');row.className='file';
+ const info=document.createElement('div'),h=document.createElement('h3'),a=document.createElement('a');
+ a.href=repo+f.path.split('/').map(encodeURIComponent).join('/');a.textContent=f.name;h.append(a);
+ const meta=document.createElement('div');meta.className='meta';
+ meta.textContent=(f.size<1048576?(f.size/1024).toFixed(0)+' KB':(f.size/1048576).toFixed(1)+' MB');
+ info.append(h,meta);
+ const open=document.createElement('a');open.href=a.href;open.textContent=/\.pdf$/i.test(f.name)?'打开 PDF ↗':'打开文件 ↗';
+ open.setAttribute('aria-label','打开文件：'+f.name);row.append(info,open);return row;
+}
+function buildTree(items){
+ const root={folders:new Map(),files:[]};
+ for(const f of items){const parts=f.path.split('/');let node=root;
+  for(const part of parts.slice(0,-1)){if(!node.folders.has(part))node.folders.set(part,{folders:new Map(),files:[]});node=node.folders.get(part)}
+  node.files.push(f);
+ }
+ return root;
+}
+function drawTree(node,parent,prefix,autoExpand){
+ for(const [name,child] of [...node.folders].sort(([a],[b])=>a.localeCompare(b,'zh-CN'))){
+  const path=prefix?prefix+'/'+name:name;
+  const details=document.createElement('details');details.className='folder';
+  const summary=document.createElement('summary');summary.textContent=name;
+  const content=document.createElement('div');content.className='folder-content';
+  details.open=autoExpand||expanded.has(path);
+  details.ontoggle=()=>{if(!autoExpand){if(details.open)expanded.add(path);else expanded.delete(path)}};
+  drawTree(child,content,path,autoExpand);details.append(summary,content);parent.append(details);
+ }
+ for(const f of [...node.files].sort((a,b)=>a.name.localeCompare(b.name,'zh-CN')))parent.append(fileLink(f));
+}
+function render(){
+ const terms=$('search').value.toLocaleLowerCase().trim().split(/\s+/).filter(Boolean),course=$('course').value;
+ const found=files.filter(f=>(!category||f.category===category)&&(!course||f.course===course)&&terms.every(t=>f.path.toLocaleLowerCase().includes(t)));
+ $('status').textContent=terms.length?'找到 '+found.length+' 份资料 · 已展开匹配文件夹':'展开文件夹浏览资料，或输入关键词搜索';
+ $('files').replaceChildren();drawTree(buildTree(found),$('files'),'',terms.length>0||Boolean(course));
+ if(!found.length){const p=document.createElement('p');p.textContent='没有找到匹配资料，请尝试更短的关键词或切换分类。';$('files').append(p)}
+}
+for(const b of document.querySelectorAll('[data-category]'))b.onclick=()=>{
+ category=b.dataset.category;for(const x of document.querySelectorAll('[data-category]'))x.classList.toggle('active',x===b);
+ $('course').value='';$('course').disabled=category!==''&&category!=='考试题目';render();
+};
+$('search').oninput=$('course').onchange=render;
+fetch('./catalog.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{
+ files=data;const courses=[...new Set(files.map(f=>f.course).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
+ for(const c of courses){const o=document.createElement('option');o.value=o.textContent=c;$('course').append(o)}render();
+}).catch(()=>{$('status').textContent='目录暂时无法加载。请刷新重试，或通过上方 GitHub 链接直接浏览仓库。'});
 </script></html>
