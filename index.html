@@ -20,7 +20,7 @@ const $=id=>document.getElementById(id);
 function fileLink(f){
  const row=document.createElement('article');row.className='file';
  const info=document.createElement('div'),h=document.createElement('h3'),a=document.createElement('a');
- a.href=repo+f.path.split('/').map(encodeURIComponent).join('/');a.textContent=f.name;h.append(a);
+ a.href=(/\.pdf$/i.test(f.name)?'./':repo)+f.path.split('/').map(encodeURIComponent).join('/');a.textContent=f.name;h.append(a);
  const meta=document.createElement('div');meta.className='meta';
  meta.textContent=(f.size<1048576?(f.size/1024).toFixed(0)+' KB':(f.size/1048576).toFixed(1)+' MB');
  info.append(h,meta);
